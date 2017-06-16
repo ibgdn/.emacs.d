@@ -1,0 +1,104 @@
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+
+# auto-complete-master
+*.dat
+*.tar
+*.tar.gz
+*.tar.bz2
+README.html
+doc/*.html
+/auto-complete-*/
+/.cask/
+
+# company-mode-master
+ert.el
+
+# emacs-eclim-master
+TAGS
+
+#jdee-master
+# Packaging
+.cask
+dist
+elpa
+build.properties
+build
+
+# multiple-cursors.el-master
+elpa
+*.elc
+/.ecukes-failing-scenarios
+
+# nyan-mode-master
+*.sos
+
+# smartparens-master
+elpa
+*~*
+hybridline.el
+loading.el
+presentation2.org
+talk.org
+movement.el
+pair-info.el
+parser-system.org
+parser.el
+skip-function.el
+skip-function.org
+talk.org.org
+
+# yasnippet-master
+authors.txt
+doc/gh-pages
+doc/*.html
+doc/html-revision
+pkg/
+extras/imported/**
+!extras/imported/*/.yas-setup.el
+.yas-compiled-snippets.el
+ert-x.*
+ert.*
+
+# customize
+network-security.data
+eshell
+image-dired
+semanticdb
+snippets
+ac-comphist.dat
+abbrev_defs
+init.el~
+smex-items
+custom.el
+customize.el
+customize.el~
+ede-projects.el
+org-clock-save.el
+url/
+var
+history
+ditaa*.jar
+projectile-bookmarks.eld
+recentf
+recentf~
+.session
+.smex-items
+.gitignore~

@@ -54,7 +54,7 @@
 
 ;; ----------------------------- load packages configs -----------------------------
 (add-to-list 'load-path (expand-file-name "lisp/purcell" user-emacs-directory))
-(require 'purcell-benchmarking) ;; Measure startup time	14:48 2017/1/24
+(require 'init-purcell-benchmarking) ;; Measure startup time	14:48 2017/1/24
 (require 'purcell-editing-utils) ; undo-tree、scope-line and guide-key(had replaced by which key); dependence on diminish	11:38 2017/1/25
 (require 'purcell-ibuffer)
 (require 'custom-smex) ;; it provides a convenient interface to your recently and most frequently used commands.And to all the other commands, too.

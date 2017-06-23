@@ -1,23 +1,56 @@
 ;; ------------------------- custom-operate-habit start -------------------------
 
 ;; Turn off the sound warning of error.
-  (setq visible-bell t)
+(setq visible-bell t)
 ;; Answer y-or-n instead of yes-or-no.
-  (fset 'yes-or-no-p 'y-or-n-p)
-;; Hide the broken arrow
-; (global-visual-line-mode 1)
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; 对内嵌的括号等pair符号加不同颜色
+(require-package 'rainbow-delimiters)
+(rainbow-delimiters-mode t)
+
+;; use smartparens
+(require-package 'smartparens)
+;; global enabled, and use strict mode
+(smartparens-global-strict-mode +1)
 
 ;; To prevent the scrolling of the whole page, scroll-margin 2 left two lines to see the context very well. conservatively(carefully)
-  (setq scroll-margin 2 scroll-conservatively 99999)
+(setq scroll-margin 2 scroll-conservatively 99999)
 
 ;; Remove whitespace and empty lines at the end of the line or file automatically.
-  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; Add an empty line at the end of file. invalid if remove whitespace.
 					;  (setq require-final-newline t)
 
 
 ;;当你在shell、telnet、w3m等模式下时，必然碰到过要输入密码的情况,此时加密显出你的密码
-  (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
+(add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
+
+;; --------------------------------------------------
+;; which-key
+;; Displays available keybindings in popup.(The guide-key has the same functionality.)
+;; https://github.com/justbur/emacs-which-key
+;; --------------------------------------------------
+(require-package 'which-key)
+(which-key-mode)
+(setq which-key-popup-type 'side-window)
+;; location of which-key window. valid values: top, bottom, left, right,
+;; or a list of any of the two. If it's a list, which-key will always try
+;; the first location first. It will go to the second location if there is
+;; not enough room to display any keys in the first location
+(setq which-key-side-window-location 'right)
+;; max width of which-key window, when displayed at left or right.
+;; valid values: number of columns (integer), or percentage out of current
+;; frame's width (float larger than 0 and smaller than 1)
+(setq which-key-side-window-max-width 0.50)
+;; max height of which-key window, when displayed at top or bottom.
+;; valid values: number of lines (integer), or percentage out of current
+;; frame's height (float larger than 0 and smaller than 1)
+; (setq which-key-side-window-max-height 0.65)
+
+
+
+
 
 ;; 使用语法显示的大文件在移动时如此之慢（缓解办法）
                                         ; (setq lazy-lock-defer-on-scrolling t)

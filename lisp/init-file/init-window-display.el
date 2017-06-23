@@ -19,6 +19,12 @@
 ;; no scroll
 (set-scroll-bar-mode nil)
 
+;; Hide the broken arrow
+;; (global-visual-line-mode 1)
+;; (add-hook 'ibuffer-mode-hook (lambda ()
+                           ;; (global-visual-line-mode nil)))
+
+
 ;; no tool bar
 ;; (tool-bar-mode nil) ;; not work
 
@@ -29,7 +35,7 @@
 ;; --------------------------------- window size
 (setq default-frame-alist
       '((vertical-scroll-bars)
-        (width . 110)
+        (width . 96)
         (height . 38)
 	(tool-bar-lines . 0)
         ))

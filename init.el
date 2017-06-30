@@ -48,7 +48,6 @@
 ;; (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 ;; (defconst *is-a-mac* (eq system-type 'darwin))
 (require 'custom-operate-habit) ; Some operate configs for startup,package and so on.which-key 11:18 2017/2/17
-;; (require 'custom-modes-settings) ; Default turn on some modes. 2017/06/15
 (require 'custom-key-bind) ; Keys bind on function. 2017/06/15
 
 
@@ -75,10 +74,6 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/lisp/snippets")
 
-;; ------------------------------ system setting begin ------------------------------
-(set-language-environment 'Chinese-GB)
-(setq default-buffer-file-coding-system 'utf-8) ;Default coding system (for new files)
-(prefer-coding-system 'utf-8) ; buffer新建和读取都默认是utf-8
 
 ;; --------------------------------- default load path
 ;; (setq default-directory "~/Workspaces")

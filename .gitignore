@@ -102,3 +102,8 @@ recentf~
 .session
 .smex-items
 .gitignore~
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree

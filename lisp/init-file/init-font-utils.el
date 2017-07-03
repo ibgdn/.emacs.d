@@ -6,10 +6,26 @@
 ;; (setq default-buffer-file-coding-system 'utf-8) ;Default coding system (for new files)
 ;; (prefer-coding-system 'utf-8) ; buffer新建和读取都默认是utf-8
 
+;; (set-fontset-font "fontset-default"
+                  ;; 'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
 
-(set-face-attribute 'default nil :font "consolas-10:weight=normal")
+;; ============================================================
+;; Setting English Font
+(set-face-attribute
+ 'default nil :font "consolas 10")
+(set-fontset-font "fontset-default"
+                 'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
+
+;; Setting Chinese Font
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;   (set-fontset-font (frame-parameter nil 'font)
+;;             charset
+;;             (font-spec :family "Microsoft Yahei" :size 14)))
+
+;; (set-face-attribute 'default nil :font :font "consolas-10:weight=normal")
 ;; 这句是配置中文字体并设置中文字体的缩放比例
-(setq face-font-rescale-alist (list (cons "Microsoft Yahei" 1.2)))
+;; (setq face-font-rescale-alist (list (cons "Microsoft Yahei" 1.2)))
+
 ;; 这句是指定行间距
 (setq-default line-spacing 1)
 

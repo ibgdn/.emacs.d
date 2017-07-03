@@ -104,6 +104,8 @@ recentf~
 .gitignore~
 # Backup files
 *~
+.bookmarks.el
+sh.exe.stackdump
 
 # Undo-tree save-files
 *.~undo-tree

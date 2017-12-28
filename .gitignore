@@ -105,6 +105,7 @@ recentf~
 # Backup files
 *~
 .bookmarks.el
+.sqli_history
 sh.exe.stackdump
 
 # Undo-tree save-files
